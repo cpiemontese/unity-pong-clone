@@ -6,9 +6,15 @@ public class PaddleAIProducer : Producer<Vector2> {
 
     void Start()
     {
+        _ball = null;
     }
 
     GameObject GetBall() {
+        if (_ball == null)
+        {
+            _alreadyGot = false;
+        }
+
         if (!_alreadyGot)
         {
             var maybeBall = GameObject.FindWithTag("Ball");
