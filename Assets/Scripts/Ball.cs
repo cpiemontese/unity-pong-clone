@@ -30,10 +30,26 @@ public class Ball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        var shouldCorrect = false;
+        var xCorrection = 0.0f;
         if (Mathf.Abs(rb2d.velocity.x) < startingVelocityFactor)
         {
             var sign = Mathf.Sign(rb2d.velocity.x);
-            rb2d.velocity = new Vector2(rb2d.velocity.x + sign*Time.deltaTime, rb2d.velocity.y);
+            xCorrection = sign * Time.deltaTime;
+            shouldCorrect = true;
+        }
+
+        var yCorrection = 0.0f;
+        if (Mathf.Abs(rb2d.velocity.y) < Mathf.Epsilon)
+        {
+            var sign = Mathf.Sign(rb2d.velocity.y);
+            yCorrection = sign * Time.deltaTime;
+            shouldCorrect = true;
+        }
+
+        if (shouldCorrect)
+        {
+            rb2d.velocity = new Vector2(rb2d.velocity.x + xCorrection, rb2d.velocity.y + yCorrection);
         }
     }
 }
