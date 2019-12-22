@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
@@ -22,12 +20,6 @@ public class Ball : MonoBehaviour
         rb2d.velocity = new Vector2(startingDirection, Random.Range(-1.0f, 1.0f)) * startingVelocityFactor;
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
     void Update()
     {
         var shouldCorrect = false;

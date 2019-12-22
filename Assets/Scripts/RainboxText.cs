@@ -10,7 +10,6 @@ public class RainboxText : MonoBehaviour
     Color currentColor;
     float timeSinceChange;
 
-    // Start is called before the first frame update
     void Start()
     {
         text = GetComponent<Text>();
@@ -19,7 +18,6 @@ public class RainboxText : MonoBehaviour
         targetColor = Random.ColorHSV();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (timeSinceChange >= colorChangeDuration)

@@ -432,6 +432,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6199935610899742915, guid: f4c9a70cac9b49a83bf93d0acb84c3b1,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6199935610899742916, guid: f4c9a70cac9b49a83bf93d0acb84c3b1,
         type: 3}
       propertyPath: m_Name
@@ -762,7 +767,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1acb36298b62f6895bd8f2d5d509b0dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  difficulty: 1
   ballPrefab: {fileID: 2727072842353152301, guid: eb48768d57ef6d6a5b301f57f949701c,
     type: 3}
 --- !u!1 &2063312464

@@ -6,16 +6,9 @@ public class GameManager : MonoBehaviour
 
     GameObject ballInstance;
 
-    // Start is called before the first frame update
     void Start()
     {
         ballInstance = Instantiate(ballPrefab);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void Reset()
