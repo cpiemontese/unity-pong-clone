@@ -9,7 +9,7 @@ public class PaddleHumanProducer : Producer<Vector2> {
     {
     }
 
-    public override Vector2 produce() {
+    public override Vector2 Produce() {
         var vertical = Input.GetAxis("Vertical");
         var newValue = Vector2.zero;
         if (vertical > 0.0f)

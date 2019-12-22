@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class Boundary : MonoBehaviour
 {
-    public GameObject ball;
+    public GameManager gameManager;
 
-    GameObject ballInstance;
+    int score;
 
     // Start is called before the first frame update
     void Start()
     {
-        ballInstance = Instantiate(ball);
+        score = 0;   
     }
 
     // Update is called once per frame
@@ -20,9 +20,8 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void Reset()
-    {
-        Destroy(ballInstance);
-        ballInstance = Instantiate(ball);
+    void OnTriggerEnter2D(Collider2D _) {
+        score += 1;
+        gameManager.Reset();
     }
 }

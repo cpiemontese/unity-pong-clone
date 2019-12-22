@@ -12,6 +12,6 @@ public class PaddleController : MonoBehaviour {
 
     void Update()
     {
-        consumer.consume(producer.produce());
+        consumer.Consume(producer.Produce());
     }
 }

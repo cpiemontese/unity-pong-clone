@@ -1,5 +1,5 @@
 using UnityEngine;
 
 public abstract class Producer<T>: MonoBehaviour {
-    public abstract T produce();
+    public abstract T Produce();
 }

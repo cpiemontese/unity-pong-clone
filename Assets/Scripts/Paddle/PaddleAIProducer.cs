@@ -21,7 +21,7 @@ public class PaddleAIProducer : Producer<Vector2> {
         return _ball;
     }
 
-    override public Vector2 produce() {
+    override public Vector2 Produce() {
         var newValue = Vector2.zero;
         var ball = GetBall();
         if (ball != null) {

@@ -23,7 +23,7 @@ public class PaddleConsumer: Consumer<Vector2> {
         } */
     }
 
-    override public void consume(Vector2 force) {
+    override public void Consume(Vector2 force) {
 /*         shouldUpdate = true;
         newForce = force; */
         rb2d.AddForce(force * forceFactor);
