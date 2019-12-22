@@ -2,7 +2,6 @@
 
 public class GameManager : MonoBehaviour
 {
-    public Difficulty difficulty = Difficulty.Normal;
     public GameObject ballPrefab;
 
     GameObject ballInstance;
