@@ -762,7 +762,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1acb36298b62f6895bd8f2d5d509b0dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ball: {fileID: 2727072842353152301, guid: eb48768d57ef6d6a5b301f57f949701c, type: 3}
+  difficulty: 1
+  ballPrefab: {fileID: 2727072842353152301, guid: eb48768d57ef6d6a5b301f57f949701c,
+    type: 3}
 --- !u!1 &2063312464
 GameObject:
   m_ObjectHideFlags: 0

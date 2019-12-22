@@ -1,17 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject ball;
+    public Difficulty difficulty = Difficulty.Normal;
+    public GameObject ballPrefab;
 
     GameObject ballInstance;
 
     // Start is called before the first frame update
     void Start()
     {
-        ballInstance = Instantiate(ball);
+        ballInstance = Instantiate(ballPrefab);
     }
 
     // Update is called once per frame
@@ -23,6 +22,6 @@ public class GameManager : MonoBehaviour
     public void Reset()
     {
         Destroy(ballInstance);
-        ballInstance = Instantiate(ball);
+        ballInstance = Instantiate(ballPrefab);
     }
 }
