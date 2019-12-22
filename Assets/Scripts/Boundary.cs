@@ -1,9 +1,10 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Boundary : MonoBehaviour
 {
+    public Text scoreText;
     public GameManager gameManager;
 
     int score;
@@ -22,6 +23,7 @@ public class Boundary : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D _) {
         score += 1;
+        scoreText.text = score.ToString();
         gameManager.Reset();
     }
 }
