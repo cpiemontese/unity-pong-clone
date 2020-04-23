@@ -1,20 +1,12 @@
 using UnityEngine;
 
 public class PaddleConsumer: Consumer<Vector2> {
-    public float forceFactor = 1.0f;
+    float minY = -5.5f;
+    float maxY = 5.5f;
 
-    Rigidbody2D rb2d;
-
-    void Start()
-    {
-        rb2d = GetComponent<Rigidbody2D>();
-    }
-
-    void Update()
-    {
-    }
-
-    override public void Consume(Vector2 force) {
-        rb2d.AddForce(force * forceFactor);
+    override public void Consume(Vector2 movement) {
+        transform.Translate(movement.x, movement.y, 0f);
+        var clampedY = Mathf.Clamp(transform.position.y, minY, maxY);
+        transform.position = new Vector3(transform.position.x, clampedY, transform.position.z);
     }
 }

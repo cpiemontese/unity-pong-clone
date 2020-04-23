@@ -1,6 +1,9 @@
 using UnityEngine;
 
 public class PaddleAIProducer : Producer<Vector2> {
+    public float forceFactor = 10.0f;
+    public float minActivationDelta = 0.25f;
+
     GameObject _ball;
     bool _alreadyGot = false;
 
@@ -33,12 +36,11 @@ public class PaddleAIProducer : Producer<Vector2> {
         if (ball != null) {
             var ballY = ball.transform.position.y;
             var thisY = transform.position.y;
-            if (thisY < ballY) {
-                newValue = Vector2.up;
-            } else if (thisY > ballY) {
-                newValue = Vector2.down;
+            var delta = ballY - thisY;
+            if (Mathf.Abs(delta) >= minActivationDelta) {
+                newValue = Mathf.Sign(ballY - thisY) > 0 ? Vector2.up : Vector2.down;
             }
         }
-        return newValue;
+        return newValue * forceFactor * Time.deltaTime;
     }
 }

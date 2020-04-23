@@ -442,6 +442,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Human Paddle
       objectReference: {fileID: 0}
+    - target: {fileID: 6199935610899742919, guid: f4c9a70cac9b49a83bf93d0acb84c3b1,
+        type: 3}
+      propertyPath: forceFactor
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 6199935610899742973, guid: f4c9a70cac9b49a83bf93d0acb84c3b1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -565,11 +570,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AI Paddle
-      objectReference: {fileID: 0}
-    - target: {fileID: 7557405851139285734, guid: 76472057e12e90ae1b274fd1c0c4656d,
-        type: 3}
-      propertyPath: forceFactor
-      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76472057e12e90ae1b274fd1c0c4656d, type: 3}
