@@ -18,6 +18,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public int difficulty {
+        get {
+            PrefsManager.PrintPrefs();
+            return PrefsManager.difficulty;
+        }
+        set {
+            PrefsManager.difficulty = value;
+            PrefsManager.PrintPrefs();
+        }
+    }
+
     bool _settingsOpen = false;
     public bool settingsOpen {
         get => _settingsOpen;
@@ -37,10 +48,6 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape)) {
             paused = !paused;
         }
-    }
-
-    public void Reset()
-    {
     }
 
     public void LoadScene(string sceneName) {

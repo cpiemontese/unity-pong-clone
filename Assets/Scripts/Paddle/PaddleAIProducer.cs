@@ -4,6 +4,7 @@ public class PaddleAIProducer : Producer<Vector2> {
     public float forceFactor = 10.0f;
     public float minActivationDelta = 0.25f;
 
+    GameManager _gameManager;
     GameObject _ball;
     bool _alreadyGot = false;
 
