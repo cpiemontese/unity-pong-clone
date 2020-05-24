@@ -1,19 +1,43 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public GameObject ballPrefab;
+    public GameObject gamePausedUI;
 
-    GameObject ballInstance;
+    GameObject _ballInstance;
 
-    void Start()
+    bool _paused = false;
+
+    public bool paused {
+        get => _paused;
+        set {
+            _paused = value;
+            Time.timeScale = _paused ? 0f : 1f;
+            gamePausedUI.SetActive(_paused);
+        }
+    }
+
+    void Awake()
     {
-        ballInstance = Instantiate(ballPrefab);
+        _ballInstance = Instantiate(ballPrefab);
+    }
+
+
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            paused = !paused;
+        }
     }
 
     public void Reset()
     {
-        Destroy(ballInstance);
-        ballInstance = Instantiate(ballPrefab);
+        Destroy(_ballInstance);
+        _ballInstance = Instantiate(ballPrefab);
+    }
+
+    public void LoadScene(string sceneName) {
+        SceneManager.LoadScene(sceneName);
     }
 }
