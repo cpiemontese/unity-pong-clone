@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject gamePausedUI;
     public GameObject settingsUI;
+    public bool openPausedUIOnEsc = false;
 
     GameObject _ballInstance;
 
@@ -53,7 +54,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (openPausedUIOnEsc && Input.GetKeyDown(KeyCode.Escape))
         {
             paused = !paused;
         }

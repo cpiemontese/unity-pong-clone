@@ -13,6 +13,7 @@ public class PaddleController : MonoBehaviour
 
     void Update()
     {
-        consumer.Consume(producer.Produce());
+        if (Time.timeScale > 0f)
+            consumer.Consume(producer.Produce());
     }
 }

@@ -1548,6 +1548,11 @@ PrefabInstance:
       propertyPath: settingsUI
       value: 
       objectReference: {fileID: 1490517857}
+    - target: {fileID: 9175822297736086646, guid: 8c333de40ae158fdeb4abff8fdfac6cb,
+        type: 3}
+      propertyPath: openPausedUIOnEsc
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9175822297736086647, guid: 8c333de40ae158fdeb4abff8fdfac6cb,
         type: 3}
       propertyPath: m_LocalPosition.x
