@@ -788,6 +788,11 @@ PrefabInstance:
       propertyPath: minActivationDelta
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 7622572904280897073, guid: 76472057e12e90ae1b274fd1c0c4656d,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1996176071}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76472057e12e90ae1b274fd1c0c4656d, type: 3}
 --- !u!1 &1647651065
