@@ -5,11 +5,11 @@ public class GameManager : MonoBehaviour
 {
     public GameObject ballPrefab;
     public GameObject gamePausedUI;
+    public GameObject settingsUI;
 
     GameObject _ballInstance;
 
     bool _paused = false;
-
     public bool paused {
         get => _paused;
         set {
@@ -19,8 +19,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    bool _settingsOpen = false;
+    public bool settingsOpen {
+        get => _settingsOpen;
+        set {
+            _settingsOpen = value;
+            settingsUI.SetActive(_settingsOpen);
+        }
+    }
+
     void Awake()
     {
+        Time.timeScale = 1f;
         _ballInstance = Instantiate(ballPrefab);
     }
 
