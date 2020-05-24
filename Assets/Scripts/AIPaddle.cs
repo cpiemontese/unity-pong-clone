@@ -3,7 +3,7 @@ using UnityEngine;
 public class AIPaddle : MonoBehaviour
 {
     public GameManager gameManager;
-    public float movementSpeed = 10.0f;
+    public float force = 10.0f;
     public float minActivationDelta = 0.25f;
     [Range(0f, 1f)]
     public float easyErrorProbability = 0.5f;
@@ -78,6 +78,6 @@ public class AIPaddle : MonoBehaviour
             vx = -vx;
         }
 
-        _rigidBody.velocity = new Vector2(0f, vx * movementSpeed);
+        _rigidBody.AddForce(new Vector2(0f, vx * force));
     }
 }
