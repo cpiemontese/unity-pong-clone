@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class PaddleAIProducer : Producer<Vector2>
 {
     public GameManager gameManager;
-    public float forceFactor = 10.0f;
+    public float movementSpeed = 10.0f;
     public float minActivationDelta = 0.25f;
     [Range(0f, 1f)]
     public float easyErrorProbability = 0.5f;
@@ -42,7 +42,7 @@ public class PaddleAIProducer : Producer<Vector2>
 
     override public Vector2 Produce()
     {
-        var direction = 0;
+        var vx = 0f;
         var ball = GetBall();
         if (ball != null)
         {
@@ -50,41 +50,32 @@ public class PaddleAIProducer : Producer<Vector2>
             var thisY = transform.position.y;
             var delta = ballY - thisY;
             if (Mathf.Abs(delta) >= minActivationDelta)
-                direction = Mathf.RoundToInt(Mathf.Sign(delta));
+                vx = Mathf.Sign(delta);
         }
 
         var directionChangeRoll = Random.Range(0f, 1f);
+        var flipVx = false;
         switch (gameManager.difficulty)
         {
             case 0:
-                if (directionChangeRoll < easyErrorProbability)
-                {
-                    Debug.Log("Easy: changed direction!");
-                    direction = -direction;
-                }
+                flipVx = directionChangeRoll < easyErrorProbability;
                 break;
             case 1:
-                if (directionChangeRoll < mediumErrorProbability)
-                {
-                    Debug.Log("Medium: changed direction!");
-                    direction = -direction;
-                }
+                flipVx = directionChangeRoll < mediumErrorProbability;
                 break;
             case 2:
-                if (directionChangeRoll < hardErrorProbability)
-                {
-                    Debug.Log("Hard: changed direction!");
-                    direction = -direction;
-                }
+                flipVx = directionChangeRoll < hardErrorProbability;
                 break;
             default:
+                Debug.LogWarning($"Unknown difficulty {gameManager.difficulty}");
                 break;
         }
 
-        var newValue = Vector2.zero;
-        if (direction != 0)
-            newValue = Mathf.Sign(direction) > 0 ? Vector2.up : Vector2.down;
+        if (flipVx)
+        {
+            vx = -vx;
+        }
 
-        return newValue * forceFactor * Time.deltaTime;
+        return new Vector2(0f, vx * movementSpeed);
     }
 }

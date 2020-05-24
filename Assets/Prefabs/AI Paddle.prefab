@@ -168,5 +168,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32d9a4c1b1d4d4204bb8f3831cdba244, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceFactor: 10
+  gameManager: {fileID: 0}
+  forceFactor: 15
   minActivationDelta: 0.25
+  easyErrorProbability: 0.5
+  mediumErrorProbability: 0.25
+  hardErrorProbability: 0

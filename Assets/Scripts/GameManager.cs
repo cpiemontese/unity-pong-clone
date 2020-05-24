@@ -7,8 +7,7 @@ public class GameManager : MonoBehaviour
     public GameObject settingsUI;
     public bool openPausedUIOnEsc = false;
 
-    GameObject _ballInstance;
-
+    [SerializeField]
     bool _paused = false;
     public bool paused
     {
@@ -17,21 +16,25 @@ public class GameManager : MonoBehaviour
         {
             _paused = value;
             Time.timeScale = _paused ? 0f : 1f;
-            gamePausedUI.SetActive(_paused);
+            if (gamePausedUI != null)
+            {
+                gamePausedUI.SetActive(_paused);
+            }
         }
     }
 
+    [SerializeField]
+    int _difficulty = 0;
     public int difficulty
     {
         get
         {
-            PrefsManager.PrintPrefs();
             return PrefsManager.difficulty;
         }
         set
         {
+            _difficulty = value;
             PrefsManager.difficulty = value;
-            PrefsManager.PrintPrefs();
         }
     }
 
@@ -42,13 +45,17 @@ public class GameManager : MonoBehaviour
         set
         {
             _settingsOpen = value;
-            settingsUI.SetActive(_settingsOpen);
+            if (settingsUI != null)
+            {
+                settingsUI.SetActive(_settingsOpen);
+            }
         }
     }
 
     void Awake()
     {
         Time.timeScale = 1f;
+        PrefsManager.difficulty = 0;
     }
 
 
