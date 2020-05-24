@@ -24,7 +24,7 @@ public class RainbowTrail : MonoBehaviour
         if (timeSinceChange >= colorChangeDuration)
         {
             currentColor = targetColor;
-            targetColor = Random.ColorHSV();
+            targetColor = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
             timeSinceChange = 0f;
         }
         timeSinceChange += Time.deltaTime;

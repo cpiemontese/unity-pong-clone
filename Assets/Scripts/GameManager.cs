@@ -3,7 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject ballPrefab;
     public GameObject gamePausedUI;
     public GameObject settingsUI;
 
@@ -31,7 +30,6 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         Time.timeScale = 1f;
-        _ballInstance = Instantiate(ballPrefab);
     }
 
 
@@ -43,8 +41,6 @@ public class GameManager : MonoBehaviour
 
     public void Reset()
     {
-        Destroy(_ballInstance);
-        _ballInstance = Instantiate(ballPrefab);
     }
 
     public void LoadScene(string sceneName) {

@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class Boundary : MonoBehaviour
@@ -14,9 +13,9 @@ public class Boundary : MonoBehaviour
         score = 0;   
     }
 
-    void OnTriggerEnter2D(Collider2D _) {
+    void OnTriggerEnter2D(Collider2D other) {
         score += 1;
         scoreText.text = score.ToString();
-        gameManager.Reset();
+        other.gameObject.GetComponent<Ball>().Reset();
     }
 }
