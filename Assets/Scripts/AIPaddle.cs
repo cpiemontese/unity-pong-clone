@@ -1,7 +1,6 @@
 using UnityEngine;
-using System.Collections.Generic;
 
-public class PaddleAIProducer : Producer<Vector2>
+public class AIPaddle : MonoBehaviour
 {
     public GameManager gameManager;
     public float movementSpeed = 10.0f;
@@ -14,11 +13,14 @@ public class PaddleAIProducer : Producer<Vector2>
     public float hardErrorProbability = 0.0f;
 
     GameObject _ball;
+    Rigidbody2D _rigidBody;
     bool _alreadyGot = false;
+
 
     void Awake()
     {
         _ball = null;
+        _rigidBody = gameObject.GetComponent<Rigidbody2D>();
     }
 
     GameObject GetBall()
@@ -40,7 +42,7 @@ public class PaddleAIProducer : Producer<Vector2>
         return _ball;
     }
 
-    override public Vector2 Produce()
+    void Update()
     {
         var vx = 0f;
         var ball = GetBall();
@@ -76,6 +78,6 @@ public class PaddleAIProducer : Producer<Vector2>
             vx = -vx;
         }
 
-        return new Vector2(0f, vx * movementSpeed);
+        _rigidBody.velocity = new Vector2(0f, vx * movementSpeed);
     }
 }

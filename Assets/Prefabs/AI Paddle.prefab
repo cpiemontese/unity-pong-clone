@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 7557405851139285733}
   - component: {fileID: 7557405851139285732}
   - component: {fileID: 7557405851139285735}
-  - component: {fileID: 7557405851139285734}
-  - component: {fileID: 7557405851139285729}
   - component: {fileID: 7622572904280897073}
   m_Layer: 8
   m_Name: AI Paddle
@@ -132,30 +130,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &7557405851139285734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7557405851139285731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e391cc04f22c846ab36e20ab060bf1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7557405851139285729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7557405851139285731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55dc5a1b712cb34b9925dd767fbcf7e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7622572904280897073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,7 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
-  forceFactor: 15
+  movementSpeed: 10
   minActivationDelta: 0.25
   easyErrorProbability: 0.5
   mediumErrorProbability: 0.25
