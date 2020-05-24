@@ -525,6 +525,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 156515826}
   m_CullTransparentMesh: 0
+--- !u!114 &248090656 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8528519119467993947, guid: e1354bcaa4d35cab5990f9494368254e,
+    type: 3}
+  m_PrefabInstance: {fileID: 43857324}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &285009682
 GameObject:
   m_ObjectHideFlags: 0
@@ -814,6 +826,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410614415}
   m_CullTransparentMesh: 0
+--- !u!114 &615780449 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1493380602051135222, guid: e1354bcaa4d35cab5990f9494368254e,
+    type: 3}
+  m_PrefabInstance: {fileID: 43857324}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &673047551
 GameObject:
   m_ObjectHideFlags: 0
@@ -1215,6 +1239,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122424615}
   m_CullTransparentMesh: 0
+--- !u!114 &1150420584 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7646292688505767898, guid: e1354bcaa4d35cab5990f9494368254e,
+    type: 3}
+  m_PrefabInstance: {fileID: 43857324}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1158920649
 GameObject:
   m_ObjectHideFlags: 0
@@ -1292,6 +1328,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1158920649}
   m_CullTransparentMesh: 0
+--- !u!114 &1728749299 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3806626046736152251, guid: e1354bcaa4d35cab5990f9494368254e,
+    type: 3}
+  m_PrefabInstance: {fileID: 43857324}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1735503444
 GameObject:
   m_ObjectHideFlags: 0
@@ -1383,9 +1431,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9175822297736086646, guid: 8c333de40ae158fdeb4abff8fdfac6cb,
         type: 3}
+      propertyPath: difficultyToggles.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9175822297736086646, guid: 8c333de40ae158fdeb4abff8fdfac6cb,
+        type: 3}
       propertyPath: settingsUI
       value: 
       objectReference: {fileID: 43857326}
+    - target: {fileID: 9175822297736086646, guid: 8c333de40ae158fdeb4abff8fdfac6cb,
+        type: 3}
+      propertyPath: difficultyToggles.Array.data[0]
+      value: 
+      objectReference: {fileID: 1728749299}
+    - target: {fileID: 9175822297736086646, guid: 8c333de40ae158fdeb4abff8fdfac6cb,
+        type: 3}
+      propertyPath: difficultyToggles.Array.data[1]
+      value: 
+      objectReference: {fileID: 1150420584}
+    - target: {fileID: 9175822297736086646, guid: 8c333de40ae158fdeb4abff8fdfac6cb,
+        type: 3}
+      propertyPath: difficultyToggles.Array.data[2]
+      value: 
+      objectReference: {fileID: 248090656}
+    - target: {fileID: 9175822297736086646, guid: 8c333de40ae158fdeb4abff8fdfac6cb,
+        type: 3}
+      propertyPath: musicToggle
+      value: 
+      objectReference: {fileID: 615780449}
     - target: {fileID: 9175822297736086647, guid: 8c333de40ae158fdeb4abff8fdfac6cb,
         type: 3}
       propertyPath: m_LocalPosition.x

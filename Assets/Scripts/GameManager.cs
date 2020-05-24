@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -7,6 +8,8 @@ public class GameManager : MonoBehaviour
     public GameObject settingsUI;
     public bool openPausedUIOnEsc = false;
     public AudioSource musicSource;
+    public Toggle[] difficultyToggles;
+    public Toggle musicToggle;
 
     [SerializeField]
     bool _paused = false;
@@ -70,6 +73,14 @@ public class GameManager : MonoBehaviour
         _music = PrefsManager.music;
         _difficulty = PrefsManager.difficulty;
         UpdateMusicSource();
+
+        if (_difficulty <= difficultyToggles.Length)
+        {
+            difficultyToggles[_difficulty].group.SetAllTogglesOff();
+            difficultyToggles[_difficulty].isOn = true;
+        }
+
+        musicToggle.isOn = _music == 1;
     }
 
 
