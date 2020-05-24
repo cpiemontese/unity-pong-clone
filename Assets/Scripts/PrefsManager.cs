@@ -12,9 +12,18 @@ public static class PrefsManager
         }
     }
 
+    public static int music
+    {
+        get => PlayerPrefs.GetInt("Music", 1);
+        set
+        {
+            PlayerPrefs.SetInt("Music", value);
+        }
+    }
+
     public static void PrintPrefs()
     {
-        string[] values = { "Difficulty" };
+        string[] values = { "Difficulty", "Music" };
 
         foreach (string value in values)
         {

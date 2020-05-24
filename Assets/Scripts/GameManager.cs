@@ -28,14 +28,24 @@ public class GameManager : MonoBehaviour
     int _difficulty = 0;
     public int difficulty
     {
-        get
-        {
-            return PrefsManager.difficulty;
-        }
+        get => PrefsManager.difficulty;
         set
         {
             _difficulty = value;
             PrefsManager.difficulty = value;
+        }
+    }
+
+    [SerializeField]
+    int _music = 0;
+    public int music
+    {
+        get => PrefsManager.music;
+        set
+        {
+            _music = 1 - _music;
+            PrefsManager.music = _music;
+            UpdateMusicSource();
         }
     }
 
@@ -53,24 +63,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    bool _music = true;
-    public bool music
-    {
-        get => _music;
-        set
-        {
-            _music = !_music;
-            if (_music)
-                musicSource.Play();
-            else
-                musicSource.Pause();
-        }
-    }
-
     void Awake()
     {
         Time.timeScale = 1f;
-        PrefsManager.difficulty = 0;
+        PrefsManager.PrintPrefs();
+        _music = PrefsManager.music;
+        _difficulty = PrefsManager.difficulty;
+        UpdateMusicSource();
     }
 
 
@@ -82,8 +81,24 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void UpdateMusicSource()
+    {
+        if (musicSource)
+        {
+            if (_music == 1)
+                musicSource.Play();
+            else
+                musicSource.Pause();
+        }
+    }
+
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }

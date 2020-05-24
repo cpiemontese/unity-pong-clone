@@ -227,7 +227,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1482844949161072750}
   toggleTransition: 1
   graphic: {fileID: 791466021133154559}
-  m_Group: {fileID: 0}
+  m_Group: {fileID: 1371112239426046908}
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -364,7 +364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -938,7 +938,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8027627786253053498}
   toggleTransition: 1
   graphic: {fileID: 208692426176562601}
-  m_Group: {fileID: 0}
+  m_Group: {fileID: 1371112239426046908}
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1014,7 +1014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1311,7 +1311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1410,7 +1410,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6303901283434246807}
   toggleTransition: 1
   graphic: {fileID: 7337249158457328051}
-  m_Group: {fileID: 0}
+  m_Group: {fileID: 1371112239426046908}
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1558,7 +1558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1660,6 +1660,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8416917492517325309}
+  - component: {fileID: 1371112239426046908}
   m_Layer: 5
   m_Name: Difficulty Buttons
   m_TagString: Untagged
@@ -1689,6 +1690,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 35}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1371112239426046908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8753396475798362576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fafe2cfe61f6974895a912c3755e8f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AllowSwitchOff: 0
 --- !u!1 &9180444731765728374
 GameObject:
   m_ObjectHideFlags: 0
