@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
     public GameObject gamePausedUI;
     public GameObject settingsUI;
     public bool openPausedUIOnEsc = false;
+    public AudioSource musicSource;
 
     [SerializeField]
     bool _paused = false;
@@ -49,6 +50,20 @@ public class GameManager : MonoBehaviour
             {
                 settingsUI.SetActive(_settingsOpen);
             }
+        }
+    }
+
+    bool _music = true;
+    public bool music
+    {
+        get => _music;
+        set
+        {
+            _music = !_music;
+            if (_music)
+                musicSource.Play();
+            else
+                musicSource.Pause();
         }
     }
 

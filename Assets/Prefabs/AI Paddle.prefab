@@ -143,8 +143,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
-  force: 10
+  force: 7
   minActivationDelta: 0.25
   easyErrorProbability: 0.4
-  mediumErrorProbability: 0.2
+  mediumErrorProbability: 0.25
   hardErrorProbability: 0

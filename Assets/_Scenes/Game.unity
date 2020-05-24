@@ -315,7 +315,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3cb0a16784fa7864f97cb714ff3a6528, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.75
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -463,6 +463,51 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2063312468}
     m_Modifications:
+    - target: {fileID: 1493380602051135222, guid: e1354bcaa4d35cab5990f9494368254e,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493380602051135222, guid: e1354bcaa4d35cab5990f9494368254e,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493380602051135222, guid: e1354bcaa4d35cab5990f9494368254e,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493380602051135222, guid: e1354bcaa4d35cab5990f9494368254e,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1996176071}
+    - target: {fileID: 1493380602051135222, guid: e1354bcaa4d35cab5990f9494368254e,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: set_music
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493380602051135222, guid: e1354bcaa4d35cab5990f9494368254e,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493380602051135222, guid: e1354bcaa4d35cab5990f9494368254e,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493380602051135222, guid: e1354bcaa4d35cab5990f9494368254e,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1493380602051135222, guid: e1354bcaa4d35cab5990f9494368254e,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3802334185796793351, guid: e1354bcaa4d35cab5990f9494368254e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -477,6 +522,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Settings UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 3802334185838391941, guid: e1354bcaa4d35cab5990f9494368254e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3802334185838391942, guid: e1354bcaa4d35cab5990f9494368254e,
         type: 3}
@@ -1568,6 +1618,11 @@ PrefabInstance:
       propertyPath: openPausedUIOnEsc
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9175822297736086646, guid: 8c333de40ae158fdeb4abff8fdfac6cb,
+        type: 3}
+      propertyPath: musicSource
+      value: 
+      objectReference: {fileID: 519420030}
     - target: {fileID: 9175822297736086647, guid: 8c333de40ae158fdeb4abff8fdfac6cb,
         type: 3}
       propertyPath: m_LocalPosition.x
