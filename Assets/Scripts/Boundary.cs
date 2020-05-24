@@ -10,10 +10,11 @@ public class Boundary : MonoBehaviour
 
     void Start()
     {
-        score = 0;   
+        score = 0;
     }
 
-    void OnTriggerEnter2D(Collider2D other) {
+    void OnTriggerEnter2D(Collider2D other)
+    {
         score += 1;
         scoreText.text = score.ToString();
         other.gameObject.GetComponent<Ball>().Reset();

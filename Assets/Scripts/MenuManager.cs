@@ -8,15 +8,19 @@ public class MenuManager : MonoBehaviour
     public delegate void OnEscapePress();
     public static event OnEscapePress onEscapePress;
 
-    void Update() {
-        if (Input.GetKeyDown(KeyCode.Escape)) {
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
             RaiseOnEscapePress();
             SceneManager.LoadScene(optionsMenuName);
         }
     }
 
-    public void RaiseOnEscapePress() {
-        if (onEscapePress != null) {
+    public void RaiseOnEscapePress()
+    {
+        if (onEscapePress != null)
+        {
             onEscapePress();
         }
     }

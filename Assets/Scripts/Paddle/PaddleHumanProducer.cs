@@ -1,6 +1,7 @@
 using UnityEngine;
 
-public class PaddleHumanProducer : Producer<Vector2> {
+public class PaddleHumanProducer : Producer<Vector2>
+{
     public float forceFactor = 10.0f;
 
     void Start()
@@ -11,7 +12,8 @@ public class PaddleHumanProducer : Producer<Vector2> {
     {
     }
 
-    public override Vector2 Produce() {
+    public override Vector2 Produce()
+    {
         var vertical = Input.GetAxis("Vertical");
         return Vector2.up * vertical * forceFactor * Time.deltaTime;
     }

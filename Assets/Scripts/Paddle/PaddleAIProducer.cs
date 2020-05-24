@@ -1,6 +1,7 @@
 using UnityEngine;
 
-public class PaddleAIProducer : Producer<Vector2> {
+public class PaddleAIProducer : Producer<Vector2>
+{
     public float forceFactor = 10.0f;
     public float minActivationDelta = 0.25f;
 
@@ -13,7 +14,8 @@ public class PaddleAIProducer : Producer<Vector2> {
         _ball = null;
     }
 
-    GameObject GetBall() {
+    GameObject GetBall()
+    {
         if (_ball == null)
         {
             _alreadyGot = false;
@@ -31,14 +33,17 @@ public class PaddleAIProducer : Producer<Vector2> {
         return _ball;
     }
 
-    override public Vector2 Produce() {
+    override public Vector2 Produce()
+    {
         var newValue = Vector2.zero;
         var ball = GetBall();
-        if (ball != null) {
+        if (ball != null)
+        {
             var ballY = ball.transform.position.y;
             var thisY = transform.position.y;
             var delta = ballY - thisY;
-            if (Mathf.Abs(delta) >= minActivationDelta) {
+            if (Mathf.Abs(delta) >= minActivationDelta)
+            {
                 newValue = Mathf.Sign(ballY - thisY) > 0 ? Vector2.up : Vector2.down;
             }
         }

@@ -9,30 +9,37 @@ public class GameManager : MonoBehaviour
     GameObject _ballInstance;
 
     bool _paused = false;
-    public bool paused {
+    public bool paused
+    {
         get => _paused;
-        set {
+        set
+        {
             _paused = value;
             Time.timeScale = _paused ? 0f : 1f;
             gamePausedUI.SetActive(_paused);
         }
     }
 
-    public int difficulty {
-        get {
+    public int difficulty
+    {
+        get
+        {
             PrefsManager.PrintPrefs();
             return PrefsManager.difficulty;
         }
-        set {
+        set
+        {
             PrefsManager.difficulty = value;
             PrefsManager.PrintPrefs();
         }
     }
 
     bool _settingsOpen = false;
-    public bool settingsOpen {
+    public bool settingsOpen
+    {
         get => _settingsOpen;
-        set {
+        set
+        {
             _settingsOpen = value;
             settingsUI.SetActive(_settingsOpen);
         }
@@ -44,13 +51,16 @@ public class GameManager : MonoBehaviour
     }
 
 
-    void Update() {
-        if (Input.GetKeyDown(KeyCode.Escape)) {
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
             paused = !paused;
         }
     }
 
-    public void LoadScene(string sceneName) {
+    public void LoadScene(string sceneName)
+    {
         SceneManager.LoadScene(sceneName);
     }
 }

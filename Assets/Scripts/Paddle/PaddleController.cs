@@ -1,6 +1,7 @@
 using UnityEngine;
 
-public class PaddleController : MonoBehaviour {
+public class PaddleController : MonoBehaviour
+{
     Producer<Vector2> producer;
     Consumer<Vector2> consumer;
 

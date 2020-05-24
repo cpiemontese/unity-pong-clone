@@ -27,6 +27,6 @@ public class RainboxText : MonoBehaviour
             timeSinceChange = 0f;
         }
         timeSinceChange += Time.deltaTime;
-        text.color = Color.Lerp(currentColor, targetColor, timeSinceChange/colorChangeDuration);
+        text.color = Color.Lerp(currentColor, targetColor, timeSinceChange / colorChangeDuration);
     }
 }
