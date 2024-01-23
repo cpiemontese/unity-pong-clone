@@ -1,3 +1,3 @@
-# yapc
+# Unity Pong Clone
 
-yapc is yet another pong clone, this time with Unity!
+A pong clone made with Unity
