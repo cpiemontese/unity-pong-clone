@@ -29,7 +29,7 @@ public static class PrefsManager
         {
             if (PlayerPrefs.HasKey(value))
             {
-                Debug.Log($"{value}: { PlayerPrefs.GetInt(value, 0)}");
+                Debug.Log($"{value}: {PlayerPrefs.GetInt(value, 0)}");
             }
             else
             {
