@@ -1719,7 +1719,7 @@ PrefabInstance:
     - target: {fileID: 9175822297736086646, guid: 8c333de40ae158fdeb4abff8fdfac6cb,
         type: 3}
       propertyPath: winningScore
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9175822297736086647, guid: 8c333de40ae158fdeb4abff8fdfac6cb,
         type: 3}
