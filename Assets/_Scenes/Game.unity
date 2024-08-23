@@ -214,6 +214,11 @@ PrefabInstance:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 1647651067}
+    - target: {fileID: 572408783151671192, guid: 83e9aab5d882ddc21a9f379c5323eee9,
+        type: 3}
+      propertyPath: boundaryType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4943386144476653049, guid: 83e9aab5d882ddc21a9f379c5323eee9,
         type: 3}
       propertyPath: m_Name
@@ -1513,6 +1518,11 @@ PrefabInstance:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 33039890}
+    - target: {fileID: 572408783151671192, guid: 83e9aab5d882ddc21a9f379c5323eee9,
+        type: 3}
+      propertyPath: boundaryType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4943386144476653049, guid: 83e9aab5d882ddc21a9f379c5323eee9,
         type: 3}
       propertyPath: m_Name
@@ -1706,6 +1716,11 @@ PrefabInstance:
       propertyPath: musicToggle
       value: 
       objectReference: {fileID: 644523032}
+    - target: {fileID: 9175822297736086646, guid: 8c333de40ae158fdeb4abff8fdfac6cb,
+        type: 3}
+      propertyPath: winningScore
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 9175822297736086647, guid: 8c333de40ae158fdeb4abff8fdfac6cb,
         type: 3}
       propertyPath: m_LocalPosition.x

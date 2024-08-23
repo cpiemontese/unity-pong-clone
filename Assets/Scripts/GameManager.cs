@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public AudioSource musicSource;
     public Toggle[] difficultyToggles;
     public Toggle musicToggle;
+    public int winningScore = 10;
 
     [SerializeField]
     bool _paused = false;
@@ -51,6 +52,11 @@ public class GameManager : MonoBehaviour
             UpdateMusicSource();
         }
     }
+
+    [SerializeField]
+    int playerScore = 0;
+    [SerializeField]
+    int aiScore = 0;
 
     bool _settingsOpen = false;
     public bool settingsOpen
@@ -100,6 +106,26 @@ public class GameManager : MonoBehaviour
                 musicSource.Play();
             else
                 musicSource.Pause();
+        }
+    }
+
+    public void ScorePlayer()
+    {
+        playerScore++;
+
+        if (playerScore >= winningScore)
+        {
+            LoadScene("PlayerWin");
+        }
+    }
+
+    public void ScoreAI()
+    {
+        aiScore++;
+
+        if (aiScore >= winningScore)
+        {
+            LoadScene("AIWin");
         }
     }
 
