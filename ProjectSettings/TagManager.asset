@@ -7,6 +7,7 @@ TagManager:
   - Ball
   - SettingsStore
   - AI
+  - MusicPlayer
   layers:
   - Default
   - TransparentFX

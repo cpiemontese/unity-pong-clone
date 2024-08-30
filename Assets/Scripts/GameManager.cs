@@ -6,8 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public GameObject gamePausedUI;
     public GameObject settingsUI;
+    public MusicPlayer musicPlayer;
     public bool openPausedUIOnEsc = false;
-    public AudioSource musicSource;
     public Toggle[] difficultyToggles;
     public Toggle musicToggle;
     public int winningScore = 10;
@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
         {
             _music = 1 - _music;
             PrefsManager.music = _music;
-            UpdateMusicSource();
+            UpdateMusicPlayer();
         }
     }
 
@@ -74,11 +74,13 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
+        musicPlayer = GameObject.FindGameObjectWithTag("MusicPlayer").GetComponent<MusicPlayer>();
+
         Time.timeScale = 1f;
         PrefsManager.PrintPrefs();
         _music = PrefsManager.music;
         _difficulty = PrefsManager.difficulty;
-        UpdateMusicSource();
+        UpdateMusicPlayer();
 
         if (_difficulty < difficultyToggles.Length)
         {
@@ -98,14 +100,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void UpdateMusicSource()
+    void UpdateMusicPlayer()
     {
-        if (musicSource)
+        if (musicPlayer != null)
         {
             if (_music == 1)
-                musicSource.Play();
+                musicPlayer.PlayMusic();
             else
-                musicSource.Pause();
+                musicPlayer.PauseMusic();
         }
     }
 
