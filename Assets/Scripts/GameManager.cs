@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
         _difficulty = PrefsManager.difficulty;
         UpdateMusicSource();
 
-        if (_difficulty <= difficultyToggles.Length)
+        if (_difficulty < difficultyToggles.Length)
         {
             difficultyToggles[_difficulty].group.SetAllTogglesOff();
             difficultyToggles[_difficulty].isOn = true;
